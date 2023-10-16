@@ -11,7 +11,7 @@ import { UserService } from 'src/app/service/user.service';
 export class ListComponent implements OnInit {
 public userlist:any
 
-constructor(private user:UserService,private router:Router){
+constructor(private user:UserService){
  
 }
 
@@ -20,9 +20,5 @@ ngOnInit(): void {
     console.log(data);
     this.userlist = data;
   })
-}
-
-goToComponent(){
-  this.router.navigate(['/modal'])
 }
 }

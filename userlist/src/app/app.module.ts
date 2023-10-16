@@ -6,7 +6,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { ListComponent } from './components/user/list/list.component';
 import { ModelComponent } from './components/user/model/model.component';
 import { SingleListComponent } from './components/user/single-list/single-list.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { PageNotFounComponent } from './components/page-not-foun/page-not-foun.component';
 
@@ -26,6 +26,7 @@ import { PageNotFounComponent } from './components/page-not-foun/page-not-foun.c
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   
 
   ],
