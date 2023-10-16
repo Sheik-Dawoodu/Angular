@@ -1,0 +1,31 @@
+                     <div class="card">
+                        <div class="card-body">
+                           <img src="https://www.sparkouttech.com/assets/images/logo/logo.svg" class="w-25">
+                        </div>
+                      </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- ADD USER BUTTON -->
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                    Create User
+                                     <app-model></app-model>
+                                </button>  
+                                   
+                            </div>
+                            <!-- user list card -->
+                          <div class="row row-cols-3 row-cols-md-3 text-center ">
+                            <div class=" col-md-3 " *ngFor="let item of userlist">
+                            <h5 class=" mt-5">{{item.first_name}}</h5>
+                            <p>{{item.email}}</p>
+                            <img src="{{item.avatar}}" class="col-6" alt="">
+                          <div class="mt-4">
+                              <button class="btn btn-primary ">add</button>
+                              <button class="btn btn-primary mx-2">add</button>
+                              <button class="btn btn-primary mx-2">add</button>
+                          </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
