@@ -1,0 +1,68 @@
+<div class="card" >
+    <div class="card-body">
+       <img src="https://www.sparkouttech.com/assets/images/logo/logo.svg" class="w-25">
+    </div>
+  </div>
+<div class="card">
+    <div class="card-body">
+        <!--ADD USER BUTTON -->
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Create User
+            </button>  
+        </div>
+
+         <!-- user list card -->
+         <div class="row row-cols-3 row-cols-md-3 text-center shadow">
+            <div class=" col-md-3 " *ngFor="let item of gettingData">
+            <h5 class=" mt-5">{{item.name}}</h5>
+            <p>{{item.age}}</p>
+            <p>{{item.email}}</p>
+            <img src="http://100.25.168.245/node-simple-crud/{{item.profile}}" class="col-5 rounded-5" alt=""> 
+            <div class="mt-4">
+            <button class="btn btn-primary mx-2" routerLink="singleuser/:userid/{{item.id}}">View</button>
+            <button class="btn btn-primary mx-2" (click)="onedit(item)" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Update</button>
+            <button class="btn btn-primary" (click)="deleteUser(item._id)">Delete</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <!-- Modal  -->
+        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create User</h1>
+                  <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Modal Form  -->
+                  <form [formGroup]="userForm" enctype="multipart/form-data">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="name@example.com" name="name" formControlName="name" required />
+                        <span>Please enter valid details</span>
+                        <label for="inputEmail">Email Your Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="job" type="email" placeholder="email" name="email" formControlName="email" required email />
+                        <label for="inputPassword">Enter Your Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control" id="job" type="file" placeholder="uplode file" (change)="onFileSelected($event)"  name="profile" formControlName="profile" required/>
+                      <input *ngIf="fileName" type="text" [value]="fileName" readonly>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="age" type="number" placeholder="uplode file" name="age" ngModel formControlName="age" required />
+                </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()">Close</button>
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"[disabled]="!userForm.valid" (click)="adduser()">Add User</button>
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" [disabled]="!userForm.valid" (click)="upDateuser()">Update User</button>
+                    </div>
+                </form>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          
