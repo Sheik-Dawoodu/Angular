@@ -1,0 +1,10 @@
+<p>services works!</p>
+
+<div class="container">
+    <div *ngFor="let item of report; let i=index">
+      <ul>
+        <li>{{i+1}} {{item.name}} </li>
+        <li>{{item.grade}}</li>
+      </ul>
+    </div>
+</div>  

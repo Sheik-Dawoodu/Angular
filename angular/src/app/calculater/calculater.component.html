@@ -1,0 +1,50 @@
+<div class="container rounded-4 w-25 border bg-dark mt-5 "> 
+    <div class="child text-white">
+      <h1 class="">Calculator</h1>
+      <div class="col-lg-12 col-sm-12">
+        <div class="card ">
+         <input type="text" [(ngModel)]="values"  class="p-4 text-end border-0" disabled>
+        </div>
+      </div>
+      <div class="">
+    <div class="btn-group first-line mt-3 " role="group" aria-label="Basic example m-5 ">
+      <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="clear()"><i class="fa-solid fa-c"></i></button>
+      <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="back()"><i class="fa-regular fa-circle-xmark"></i></button>
+      <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('%')" ><i class="fa-solid fa-percent"></i></button>
+      <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('/')" ><i class="fa-solid fa-divide"></i></button>
+    </div>
+   <!-- secound-line  -->
+   <div class="btn-group first-line mt-3" role="group" aria-label="Basic example m-5">
+      <button [(ngModel)]="values" class="rounded-circle btn  btn-outline-warning text-white mx-4 fs-4"(click)="writeinput('1')"><i class="fa-solid fa-1 p-1"></i></button>
+      <button class="rounded-circle btn btn-outline-warning text-white  mx-4 fs-5" (click)="writeinput('2')"><i class="fa-regular fa-2 p-1"></i></button>
+      <button class="rounded-circle btn btn-outline-warning text-white  mx-4 fs-4" (click)="writeinput('3')"><i class="fa-solid fa-3 p-1"></i></button>
+      <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('*')"><i class="fa-solid fa-xmark pr-1"></i></button>
+    </div>
+   <!-- third-line  -->
+   <div class="btn-group first-line mt-3 " role="group" aria-label="Basic example m-5 ">
+    <button class="rounded-circle btn btn-outline-warning text-white mx-4 fs-4 "(click)="writeinput('4')"><i class="fa-solid fa-4 p-1"></i></button>
+    <button class="rounded-circle btn btn-outline-warning text-white  mx-4 fs-5"(click)="writeinput('5')"><i class="fa-regular fa-5 p-1"></i></button>
+    <button class="rounded-circle btn btn-outline-warning text-white  mx-4 fs-4"(click)="writeinput('6')"><i class="fa-solid fa-6 p-1"></i></button>
+    <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('+')" ><i class="fa-solid fa-plus pl-1"></i></button>
+  </div>
+   <!-- fourth-line  -->
+   <div class="btn-group first-line mt-3 " role="group" aria-label="Basic example m-5 ">
+    <button class="rounded-circle btn btn-outline-warning text-white mx-4 fs-4"(click)="writeinput('7')"><i class="fa-solid fa-7 p-1"></i></button>
+    <button class="rounded-circle btn btn-outline-warning text-white  mx-4 fs-5"(click)="writeinput('8')"><i class="fa-regular fa-8 p-1"></i></button>
+    <button class="rounded-circle btn btn-outline-warning text-white  mx-4 fs-4"(click)="writeinput('9')"><i class="fa-solid fa-9 p-1"></i></button>
+    <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('-')" ><i class="fa-solid fa-minus pl-1"></i></button>
+  </div>
+   <!-- fifth-line  -->
+   <div class="btn-group first-line mt-3 " role="group" aria-label="Basic example m-5 ">
+    <button class="rounded-circle btn bg-warning mx-4 fs-4"><i class="fa-solid fa-bell fa-shake"></i></button>
+    <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('0')"><i class="fa-regular fa-0"></i></button>
+    <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="writeinput('.')"><i class="fa-solid fa-circle-dot"></i></button>
+    <button class="rounded-circle btn bg-warning mx-4 fs-4" (click)="equal()"><i class="fa-solid fa-equals p-1"></i></button>
+  </div>
+    </div>
+    </div>
+  </div>
+
+
+
+  

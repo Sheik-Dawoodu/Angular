@@ -1,0 +1,21 @@
+.ml{
+    margin-left: 50px;
+}
+.mll{
+    margin-left: 63px;
+}
+.container{
+    margin-top: 180px;
+}
+.child{
+  
+    padding-bottom: 20px;
+}
+input{
+    font-size:50px;
+    font-weight: bold;
+
+}
+.container{
+    box-shadow: 10px 5px 5px rgb(34, 34, 33);
+}

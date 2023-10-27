@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark text-white ">
+  <div class="container-fluid text-white">
+    <a class="navbar-brand text-white" href="#">Welcome</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item "  routerLinkActive="router-link-active" >
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['calculater']"><i class="fa-solid fa-calculator text-warning mx-1"></i>Calculater</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['pipe']" ><i class="fa-solid fa-p text-warning mx-1"></i>Pipes</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['output']" ><i class="fa-solid fa-check text-warning mx-1"></i>Input & output decrator</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['directives']" ><i class="fa-solid fa-star text-warning mx-1"></i>Directives</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['services']" ><i class="fa-solid fa-share-from-square text-warning"></i>Services</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['forms']" ><i class="fa-brands fa-facebook text-warning"></i>Forms</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link active fs-5 text-white" aria-current="page" [routerLink]="['reactiveforms']" ><i class="fa-brands fa-facebook text-warning"></i>ReactiveForms</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<!-- <app-output></app-output> -->

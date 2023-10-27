@@ -1,0 +1,9 @@
+{
+    "employedetails":[
+        {"id":1,"name":"sheik dawoodu","code":123},
+        {"id":2,"name":"Shakil ahmed","code":143}
+    ],
+    "serverDetails":[
+        {"id":"server 1","code":111,"content":"server size medium"}
+    ]
+}

@@ -1,0 +1,44 @@
+<p class="text-danger">Unformeted Date:</p>
+<h6>{{date}}</h6>
+
+<p class="text-danger">formeted Date:</p>
+<p>{{date| date}}</p>
+
+<p class="text-danger">medium Date:</p>
+<p>{{date| date:'medium'}}</p>
+
+<p class="text-danger">Short Date:</p>
+<p>{{date| date:'short'}}</p>
+
+<p class="text-danger">Full Date:</p>
+<p>{{date| date:'fullDate'}}</p>
+
+<p class="text-danger">Long Date:</p>
+<p>{{date| date:'longDate'}}</p>
+
+<p class="text-danger">dd-MM-yyy Formate:</p>
+<p>{{date| date:'dd-MM/MMM-yyy'}}</p>
+
+<hr class="text-success">
+<p class="text-danger">number Pipe</p>
+<p >{{num | number}}</p>
+
+<p class="text-danger"></p>
+<p >{{percentage | percent}}</p>
+
+<hr class="text-success">
+<p class="text-danger">Uppercase:</p>
+<p>{{message | uppercase}}</p>
+
+<p class="text-danger">lowercase:</p>
+<p>{{message | lowercase}}</p>
+
+<p class="text-danger">Slice:</p>
+<p>{{message | slice:6:12}}</p>
+
+<h5>currency Pipes</h5>
+<p>Price {{price |currency}}</p>
+<p>Price {{price |currency:'INR'}}</p>
+<p>Price {{price |currency:'INR'}}</p>
+<p>Price {{price |currency:'INR':false}}</p>
+

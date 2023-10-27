@@ -1,0 +1,14 @@
+<app-input (foodData)="foodupdateData($event)"></app-input>
+<br><br>
+<div class="container">
+    <div *ngIf="storage.length>0;then dataavailable;else nodata"></div>
+    <ng-template #dataavailable>
+<ul>
+    <li *ngFor="let collection of storage">{{collection}}</li>
+</ul>
+    </ng-template>
+<ng-template #nodata>
+<p>No data Available</p>
+</ng-template>
+
+</div>

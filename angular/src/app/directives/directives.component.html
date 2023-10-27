@@ -1,0 +1,79 @@
+<h1>{{PopularMovies}} in TAMIL</h1>
+<!-- bascic *ngFor" -->
+<ul>
+    <li *ngFor="let listed of movies">{{listed}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let head of moviesCollection; ">{{head.movieName}} - {{head.Directors}} - {{head.Stars}}</li>
+</ul>
+
+<select name="" id="" >
+    <option value='' *ngFor="let item of movies; "> {{item}}</option> 
+</select>
+
+<!-- ngFor using for tables -->
+<h1 class="text-center text-danger">TABLE</h1>
+<table class="table table-striped container border text-center">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>movieName</th>
+            <th>Directors</th>
+            <th>Stars</th>
+        </tr>
+    </thead>
+    <tbody class="panal-primery">
+        <tr [ngClass]="{'bg-success':o,'bg-danger':e,'text':e,}"
+            *ngFor="let collections of moviesCollection;let i=index;let e=even;let o=odd">
+            <td>{{i+1}}</td>
+            <td>{{collections.movieName}}</td>
+            <td>{{collections.Directors}}</td>
+            <td>{{collections.Stars}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- *ngswitch  -->
+Enter th number<input type="number" [(ngModel)]="ngswitch">
+<div [ngSwitch]="ngswitch">
+    <div *ngSwitchCase="1">one</div>
+    <div *ngSwitchCase="2">two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+</div>
+
+<!-- ngif  -->
+<label for="">ChekBox <input type="checkbox" [(ngModel)]="ngifValue"></label>
+{{ngifValue}}
+<p *ngIf="ngifValue">Show me true value value</p>
+<p *ngIf="!ngifValue">Show me False value value</p>
+
+<!-- ng-template  -->
+
+<div *ngIf="books; then booksAvailable else noBooksAvailable"></div>
+
+<ng-template #booksAvailable>Books is Available</ng-template>
+
+<ng-template #noBooksAvailable>Books is NotAvailable</ng-template>
+
+<!-- Attribute directives -->
+<div class="text-center">
+ <div *ngIf="booksCollection; then bookAvailable"></div>
+
+<ng-template #bookAvailable>
+
+    <div *ngFor="let obj of booksCollection; index as i;">
+        <div [ngSwitch]="obj.bookStates">
+            <div *ngSwitchCase="'notAvailable'" [ngStyle]="{ 'text-decoration':'line-through'}">
+                {{i+1}} .{{obj.bookName}}
+            </div>
+            <div *ngSwitchDefault="'Available'" [ngClass]="{'colors':true}" >
+                {{i+1}} {{obj.bookName}}
+            </div>
+        </div>
+        
+    </div>
+
+</ng-template>
+<ng-template #noBookAvailable>Books is NotAvailable</ng-template> 
+</div>

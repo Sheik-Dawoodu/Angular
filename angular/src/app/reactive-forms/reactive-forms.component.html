@@ -1,0 +1,21 @@
+<p>reactive-forms works!</p>
+<div class="container">
+<form [formGroup]="createAdressForm" (ngSubmit)="onsumit()" >
+   
+        <label for="">FirstName:</label>
+        <input type="text" formControlName="firstName">
+    
+        <label for="" class="mt-5">LastName:</label>
+        <input type="text" formControlName="lastName">
+    <div formGroupName="address">
+        <h5>Address Group</h5>
+        <label for="">StreetAddress</label>
+        <input type="text" formControlName="streetAddress">
+        <label for="">Zipcode</label>
+        <input type="text" formControlName="zibCode">
+    </div>
+    
+    <button type="submit" class="btn btn-primary mt-5 mx-5">Send</button> <!-- [disabled]="!createForm.valid" -->
+    
+</form>
+</div>

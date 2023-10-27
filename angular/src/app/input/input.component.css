@@ -1,0 +1,6 @@
+input{
+    border-color: blueviolet;
+}
+input:hover{
+    color: rgb(177, 99, 180);
+}
