@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<div fxLayoutAlign="end">
+  <button mat-raised-button (click)="openDialog()" color="primary"> 
+    Add Hotel
+  </button> 
+</div>
+<br> 
+
+
+<div fxLayout="row wrap">
+  <ng-container *ngFor="let hotels of gettinghotellist">
+    <div fxFlex="25%" class="card-container">
+      <mat-card class="example-card">
+        <img mat-card-image src="https://cdn.dribbble.com/users/2859475/screenshots/7551660/media/a6aa2061e5693b544d883e842c479728.gif" alt="">
+        <mat-card-header>
+          <mat-card-title>{{hotels.hotel_name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{hotels.hotel_address}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </ng-container>
+</div>
+

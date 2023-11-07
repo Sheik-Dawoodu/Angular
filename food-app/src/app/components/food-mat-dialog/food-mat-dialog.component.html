@@ -1,0 +1,16 @@
+<div class="container mt-3 ">
+    <form class="example-form" [formGroup]="foodForm"  (ngSubmit)="onclick()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Food Name</mat-label>
+          <input matInput placeholder="ex:Biryani"   name="food_name" formControlName="food_name"   >
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width mt-3">
+          <mat-label>Food Price</mat-label>
+              <input matInput name="food_price" type="number" formControlName="food_price">
+        </mat-form-field>
+        <div fxLayoutAlign="center">
+        <button mat-raised-button color="primary" class="col-5" type="submit">Add Food</button>
+        </div>
+      </form>
+    </div>

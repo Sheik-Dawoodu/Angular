@@ -1,0 +1,55 @@
+<div class="mt-2 top-nav">
+  <div>
+    <button mat-button>
+      <img
+        src="https://cdn.dribbble.com/users/1447046/screenshots/7813949/media/2e5dcde12e9e661e3931ad3caf77affb.gif"
+        class="img"
+        alt="logo"
+      />
+    </button>
+    <button mat-raised-button color="warn" routerLink="./">
+      Ready With Freah Foods
+    </button>
+  </div>
+  <div>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon matBadge="{{ value }}" matBadgeColor="primary" color="warn"
+        >shopping_cart</mat-icon
+      >
+    </button>
+  </div>
+</div>
+
+<div fxLayoutAlign="end" class="mt-2">
+  <button mat-raised-button (click)="openDialog()" color="primary">
+    Add Foods 
+  </button>
+</div>
+<div fxLayout="row wrap" class="container">
+  <ng-container *ngFor="let food of gettingFoodList">
+    <div fxFlex="50%" class="card-container">
+      <mat-card class="example-card">
+        <img mat-card-image src="https://cdn.dribbble.com/users/3951514/screenshots/7288432/media/866b49d81c982fdecd5a22de44c5e677.gif" alt="{{ food._id }}" />
+        <mat-card-content>
+          <h2>{{ food.food_name }}</h2>
+          <p>Price: {{ food.food_price | currency:'INR'}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <div>
+            <button class="btn" (click)="increase()">
+              <mat-icon>add</mat-icon>
+            </button>
+            <span class="text-primary mat-title value">{{ value }}</span>
+            <button class="btn" (click)="decrease()">
+              <mat-icon>remove</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-container>
+</div>

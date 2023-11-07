@@ -1,0 +1,16 @@
+<div class="container mt-3 ">
+<form class="example-form" [formGroup]="hotelFormField" (ngSubmit)="onclick()" >
+    <mat-form-field class="example-full-width">
+      <mat-label>Hotel Name</mat-label>
+      <input matInput placeholder="ex:Taj Hotal"   name="hotel_name" formControlName="hotel_name" required>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width mt-3">
+      <mat-label>Hotel Address</mat-label>
+          <input matInput name="hotel_address" formControlName="hotel_address">
+    </mat-form-field>
+    <div fxLayoutAlign="center">
+    <button mat-raised-button color="primary" class="col-5" >Add Hotel</button>
+    </div>
+  </form>
+</div>
